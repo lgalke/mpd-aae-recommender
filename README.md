@@ -1,5 +1,8 @@
 # mpd-aae-recommender
+
 Applying adversarial autoencoding recommender to Spotify million playlist dataset (RecSysChallenge 2018)
+
+**Team name:** Unconscious Bias
 
 ## Steps to train a model and apply it to a test set
 
@@ -8,7 +11,7 @@ Please make sure to run the code on a machine with GPUs and CUDA support.
 For the following command line instructions,
 the current working directory is assumed to be the present git repository.
 
-1. Setup virtual environment and install all dependencies
+### Step 1: Setup virtual environment and install all dependencies
 
 ```sh
 bash setup.bash
@@ -17,13 +20,15 @@ bash setup.bash
 This will create a virtual environment in folder `venv` and install all the necessary requirements.
 
 
-2. Activate the virtual environment
+### Step 2: Activate the virtual environment
 
 ```sh
 source venv/bin/activate
 ```
 
-3. Kick-off the experiments (can take a while)
+### Step 3: Kick-off the experiments (can take a while)
+
+CUDA support is required.
 
 ```sh
 python3 make_submission.py --data-path PATH/TO/MillionPlaylist/data --test-path PATH/TO/MillionPlaylist/test_set.json
