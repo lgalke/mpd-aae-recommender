@@ -5,6 +5,7 @@ Applying adversarial autoencoding recommender to Spotify million playlist datase
 
 After cloning the repository it takes only very few action to apply our approach.
 The current working directory is assumed to be the present git repository.
+Please make sure to run the code on a machine with GPUs and CUDA support.
 
 1. Setup virtual environment and install all dependencies
 
