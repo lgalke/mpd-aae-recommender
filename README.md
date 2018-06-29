@@ -1,10 +1,13 @@
 # mpd-aae-recommender
 
-Applying adversarial autoencoding recommender to Spotify million playlist dataset (RecSysChallenge 2018)
+Applying adversarial autoencoding recommender to Spotify million playlist dataset
+
+**Challenge:** RecSys Challenge 2018
+
+**Track:** Main track
 
 **Team name:** Unconscious Bias
 
-**Track:** main
 
 ## Steps to train a model and apply it to a test set
 
