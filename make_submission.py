@@ -19,6 +19,10 @@ from aaerec.evaluation import remove_non_missing, argtopk
 from mpd import playlists_from_slices, unpack_playlists, load
 from mpd import TRACK_INFO
 
+
+# Adjust the following line for the default paths
+# - OR -
+# Supply --data-path and --test-path at runtime
 MPD_BASE_PATH = "/data21/lgalke/MPD"
 
 DATA_PATH = os.path.join(MPD_BASE_PATH, "data")
@@ -56,7 +60,11 @@ def make_submission(predictions,
 
 def main():
     parser = argparse.ArgumentParser()
-    parser.add_argument('--model', type=str, defaule='aae',
+    parser.add_argument('--data-path', type=str, default=DATA_PATH,
+                        help="Specify base path for million playlist training data")
+    parser.add_argument('--test-path', type=str, default=TEST_PATH,
+                        help="Specify path to test set (json file)")
+    parser.add_argument('--model', type=str, default='aae',
                         # All possible method should appear here
                         choices=['cm', 'svd', 'ae', 'aae', 'mlp'],
                         help="Specify the model to use [aae]")
@@ -160,8 +168,8 @@ def main():
         exclude = None
 
     # = Training =
-    print("Loading data from {} using {} jobs".format(DATA_PATH, args.jobs))
-    playlists = playlists_from_slices(DATA_PATH, n_jobs=args.jobs, debug=args.debug,
+    print("Loading data from {} using {} jobs".format(args.data_path, args.jobs))
+    playlists = playlists_from_slices(args.data_path, n_jobs=args.jobs, debug=args.debug,
                                       without=exclude)
     print("Unpacking playlists")
     train_set = Bags(*unpack_playlists(playlists, aggregate=track_attrs))
@@ -183,12 +191,12 @@ def main():
 
     # = Predictions =
     if args.dev is not None:
-        print("Loading and unpacking DEV set")
+        print("Loading and unpacking DEV set:", args.dev)
         data, index2playlist, side_info = unpack_playlists(load(args.dev),
                                                            aggregate=track_attrs)
     else:
-        print("Loading and unpacking test set")
-        data, index2playlist, side_info = unpack_playlists(load(TEST_PATH),
+        print("Loading and unpacking test set: ", args.test_path)
+        data, index2playlist, side_info = unpack_playlists(load(args.test_path),
                                                            aggregate=track_attrs)
     test_set = Bags(data, index2playlist, side_info)
     # Apply same vocabulary as in training
