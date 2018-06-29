@@ -3,6 +3,9 @@ Applying adversarial autoencoding recommender to Spotify million playlist datase
 
 ## Steps to learn and apply a model to the challenge test set
 
+After cloning the repository it takes only very few action to apply our approach.
+The current working directory is assumed to be the present git repository.
+
 1. Setup virtual environment and install all dependencies
 
 ```sh
