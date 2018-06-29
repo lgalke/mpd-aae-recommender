@@ -3,6 +3,7 @@
 Applying adversarial autoencoding recommender to Spotify million playlist dataset (RecSysChallenge 2018)
 
 **Team name:** Unconscious Bias
+**Track:** main
 
 ## Steps to train a model and apply it to a test set
 
