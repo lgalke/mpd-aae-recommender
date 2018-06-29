@@ -6,7 +6,7 @@ Applying adversarial autoencoding recommender to Spotify million playlist datase
 1. Setup virtual environment and install all dependencies
 
 ```sh
-sh setup.sh
+bash setup.sh
 ```
 
 This will create a virtual environment in folder `venv` and install all the necessary requirements.
