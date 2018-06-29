@@ -69,9 +69,9 @@ def main():
                         choices=['cm', 'svd', 'ae', 'aae', 'mlp'],
                         help="Specify the model to use [aae]")
     parser.add_argument('--epochs', type=int, default=20,
-                        help="Specify the number of training epochs [50]")
+                        help="Specify the number of training epochs [20]")
     parser.add_argument('--hidden', type=int, default=200,
-                        help="Number of hidden units [100]")
+                        help="Number of hidden units [200]")
     parser.add_argument('--no-title', action='store_false', default=True,
                         dest='use_title',
                         help="Do not use the playlist titles")
@@ -98,7 +98,7 @@ def main():
     parser.add_argument('--lr', type=float, default=0.001,
                         help="Initial learning rate [0.001]")
     parser.add_argument('--code', type=int, default=100,
-                        help="Code dimension [50]")
+                        help="Code dimension [100]")
     args = parser.parse_args()
 
     # Either exclude and dev set, or no exclude and test set

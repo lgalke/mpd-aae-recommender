@@ -41,3 +41,5 @@ python3 make_submission.py --data-path PATH/TO/MillionPlaylist/data --test-path 
 
 Replace the argument for `--data-path` with the ./data directory of the Spotify Million Playlist Dataset and
 replace the argument for `--test-path` with the path to the json file holding test set.
+
+Per default the output will be written to `submission.csv`, if desired it can be changed by providing `-o` argument.
