@@ -1,7 +1,7 @@
 # mpd-aae-recommender
 Applying adversarial autoencoding recommender to Spotify million playlist dataset (RecSysChallenge 2018)
 
-## How To
+## Steps to train a model and apply it to a test set
 
 After cloning the repository it takes very few action to apply our approach.
 Please make sure to run the code on a machine with GPUs and CUDA support.
@@ -11,7 +11,7 @@ the current working directory is assumed to be the present git repository.
 1. Setup virtual environment and install all dependencies
 
 ```sh
-bash setup.sh
+bash setup.bash
 ```
 
 This will create a virtual environment in folder `venv` and install all the necessary requirements.
