@@ -1,0 +1,3 @@
+[submodule "aae-recommender"]
+	path = aae-recommender
+	url = https://github.com/lgalke/aae-recommender
