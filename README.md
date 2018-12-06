@@ -2,11 +2,13 @@
 
 Applying adversarial autoencoding recommender to Spotify million playlist dataset
 
-**Challenge:** RecSys Challenge 2018
+**Challenge:** [RecSys Challenge 2018](http://www.recsyschallenge.com/2018)
 
 **Track:** Main track
 
 **Team name:** Unconscious Bias
+
+For more information see [Using Adversarial Autoencoders for Multi-Modal Automatic Playlist Continuation](https://zenodo.org/record/1455214)
 
 
 ## Steps to train a model and apply it to a test set
@@ -43,3 +45,27 @@ Replace the argument for `--data-path` with the ./data directory of the Spotify 
 replace the argument for `--test-path` with the path to the json file holding test set.
 
 Per default the output will be written to `submission.csv`, if desired it can be changed by providing `-o` argument.
+
+## Cite
+
+If you use our code in your own work please cite our paper:
+
+    @inproceedings{Vagliano:2018,
+         author = {Vagliano, Iacopo and Galke, Lukas and Mai, Florian and Scherp, Ansgar},
+         title = {Using Adversarial Autoencoders for Multi-Modal Automatic Playlist Continuation},
+         booktitle = {Proceedings of the ACM Recommender Systems Challenge 2018},
+         series = {RecSys Challenge '18},
+         year = {2018},
+         isbn = {978-1-4503-6586-4},
+         location = {Vancouver, BC, Canada},
+         pages = {5:1--5:6},
+         articleno = {5},
+         numpages = {6},
+         url = {http://doi.acm.org/10.1145/3267471.3267476},
+         doi = {10.1145/3267471.3267476},
+         acmid = {3267476},
+         publisher = {ACM},
+         address = {New York, NY, USA},
+         keywords = {adversarial autoencoders, automatic playlist continuation, multi-modal recommender, music recommender systems, neural networks},
+    }
+
